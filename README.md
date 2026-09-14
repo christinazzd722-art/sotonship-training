@@ -3,3 +3,7 @@
 My first hackathon training project.
 
 Goal: Learn Git, GitHub, AI coding, and build a working AI product.
+
+## My Goal
+
+Build and demo an AI product within 48 hours.
