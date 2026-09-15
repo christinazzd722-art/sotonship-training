@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="style.css">
+
+<div class="card">
+
+    <h1>IdeaSpark AI</h1>
+
+    <p>Turn a rough idea into something you can build.</p>
+
+    <input id="ideaInput" placeholder="Describe your idea...">
+
+    <button onclick="generateIdea()">Generate Idea</button>
+
+    <p id="result">Your AI idea will appear here.</p>
+
+</div>
+
+<script>
+    function generateIdea() {
+        const idea = document.getElementById("ideaInput").value;
+
+        document.getElementById("result").textContent =
+            "You entered: " + idea;
+    }
+</script>
