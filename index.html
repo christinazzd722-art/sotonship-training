@@ -15,10 +15,19 @@
 </div>
 
 <script>
-    function generateIdea() {
+    async function generateIdea() {
         const idea = document.getElementById("ideaInput").value;
 
-        document.getElementById("result").textContent =
-            "You entered: " + idea;
+        const response = await fetch("http://localhost:3000/api/idea", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ idea: idea })
+        });
+
+        const result = await response.text();
+
+        document.getElementById("result").textContent = result;
     }
-</script>
+</script> 
