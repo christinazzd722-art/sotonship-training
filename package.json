@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/christinazzd722-art/sotonship-training/issues"
   },
-  "homepage": "https://github.com/christinazzd722-art/sotonship-training#readme"
+  "homepage": "https://github.com/christinazzd722-art/sotonship-training#readme",
+  "dependencies": {
+    "openai": "^7.19.0"
+  }
 }
