@@ -27,7 +27,34 @@
         });
 
         const result = await response.text();
+        const data = JSON.parse(result);
 
-        document.getElementById("result").textContent = result;
+        const resultBox = document.getElementById("result");
+
+        resultBox.textContent = "";
+
+        const title = document.createElement("h2");
+        title.textContent = data.projectName;
+        resultBox.appendChild(title);
+
+        const description = document.createElement("p");
+        description.textContent = data.description;
+        resultBox.appendChild(description);
+
+        const featuresTitle = document.createElement("h3");
+        featuresTitle.textContent = "Key Features";
+        resultBox.appendChild(featuresTitle);
+
+        const featuresList = document.createElement("ul");
+        data.features.forEach(feature => {
+            const item = document.createElement("li");
+            item.textContent = feature;
+            featuresList.appendChild(item);
+        });
+        resultBox.appendChild(featuresList);
+
+        const audience = document.createElement("p");
+        audience.textContent = "For: " + data.audience;
+        resultBox.appendChild(audience);
     }
 </script> 

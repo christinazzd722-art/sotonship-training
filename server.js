@@ -43,13 +43,13 @@ const server = http.createServer((req, res) => {
 
                 User idea: ${data.idea}
 
-                Keep the answer concise. Include:
-                1. Project name
-                2. What it does
-                3. Three key features
-                4. Who it is for
+                Return ONLY a valid JSON object with these fields:
+                - projectName: a short project name
+                - description: what the project does
+                - features: an array of exactly 3 key features
+                - audience: who the project is for
 
-                Use plain text only. Do not use Markdown.`
+                Do not include Markdown or explanations outside the JSON.`
             });
 
             res.end(response.output_text);

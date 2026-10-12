@@ -39,4 +39,5 @@ button:hover {
     background-color: #f8fafc;
     border-radius: 8px;
     color: #475569;
+    white-space: pre-line;
 }
